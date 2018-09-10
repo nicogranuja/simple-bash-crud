@@ -57,7 +57,7 @@ function updateFile {
     fileLocation="$dataFolder/$itemNumber.item"
 
     # Handle file read and error if file does not exist
-    if [ -e "$fileLocation" ]; then
+    if [[ -e "$fileLocation" ]]; then
         getFieldsFromInputAndUpdateItem $fileLocation
     else
         # Print and log errors

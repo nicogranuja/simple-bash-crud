@@ -7,7 +7,7 @@ function deleteFile {
     fileLocation="$dataFolder/$itemNumber.item"
     
     # Handle file read and error if file does not exist
-    if [ -e "$fileLocation" ]; then
+    if [[ -e "$fileLocation" ]]; then
         # Get simple name
         read simpleName name < $fileLocation
         

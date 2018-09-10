@@ -14,7 +14,7 @@ function createNewItem {
     fileName="$itemNumber.item"
 
     # If the file with the item number already exists
-    if [ -e "$dataFolder/$fileName" ]; then
+    if [[ -e "$dataFolder/$fileName" ]]; then
         echo -e "ERROR: File $fileName already exists"
     else
         itemData="$itemSimpleName $itemName\n$quantity $maxQuantity\n$description"

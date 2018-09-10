@@ -14,12 +14,12 @@ maxQuantity=0
 description=""
 
 # Check if needed folders and files exist and create them if they don't
-if [ ! -d "$dataFolder" ]; then 
+if [[ ! -d "$dataFolder" ]]; then 
     echo "data folder not found creating it..."
     mkdir data
 fi
 
-if [ ! -e "$queriesFile" ]; then 
+if [[ ! -e "$queriesFile" ]]; then 
     echo "queries.log file not found creating it..."
     touch data/queries.log
     chmod u+rw data/queries.log
@@ -43,7 +43,7 @@ while [ $keppGoing ]; do
     echo "D - delete an existing item"
 
     # Prevent while loop from continuing until next read
-    if ! read ans; then
+    if ! read ans ; then
         # got EOF
         break
     fi

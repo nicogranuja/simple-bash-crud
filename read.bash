@@ -17,7 +17,7 @@ function handleReadFile {
     fileLocation="$dataFolder/$itemNumber.item"
 
     # Handle file read and error if file does not exist
-    if [ -e "$fileLocation" ]; then
+    if [[ -e "$fileLocation" ]]; then
         # TODO read contents and print them
         printItem $itemNumber < $fileLocation
 
